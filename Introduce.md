@@ -53,20 +53,22 @@ generics sebagai kotak dengan label kosong yang dapat diisi dengan semua jenis b
   linkedlist adalah data yang terdiri dari node yang saling terhubung, dimana setiap node menyimpan data dan referensi ke node berikutnya. linkedlist dapat menampung berbagai tipe data.
   linkedlist memiliki kelebihan dalam hal tambah dan hapus data ditengah" linkedlist karna hanya perlu mengubah node referensi, namun memiliki kelemahan dalam hal akses data yang lebih lambat dibandingkan arraylist karena harus menelusuri node satu per satu dari awal (HEAD) hingga node yang diinginkan.
   linkedlist memiliki kelebihan dalam hal penambahan dan penghapusan data di tengah-tengah linkedlist karena hanya perlu mengubah referensi node, namun memiliki kelemahan dalam hal akses data yang lebih lambat dibandingkan arraylist karena harus menelusuri node satu per satu.
-
--------------------------------------------------------------------------------------------------------------------------------------------------------
-> ARRAYLIST (ambil cpu 1)
-[Sebelum]  | CPU_1 | CPU_2 | CPU_3 | (kosong) |
-[Proses]             >>> Geser CPU_2 dan CPU_3 ke kanan >>>
-[Sesudah]  | CPU_1 | INT_A | CPU_2 | CPU_3    |
-# Kesimpulan: Membutuhkan komputasi ekstra untuk pergeseran (shifting).
-
->  LINKED LIST ( Menyisipkan Data di Tengah)
-[Sebelum]  [CPU_1 | Pointer] ---> [CPU_2 | Pointer] ---> NULL
-
-[Proses]   1. Putus koneksi dari CPU_1 ke CPU_2.
-           2. Arahkan Pointer CPU_1 ke INT_A.
-           3. Arahkan Pointer INT_A ke CPU_2.
-
-[Sesudah]  [CPU_1 | Pointer] ---> [INT_A | Pointer] ---> [CPU_2 | Pointer] ---> NULL
-# Kesimpulan: Nol pergeseran memori. Hanya relokasi arah alamat (pointer) `
+### Struktur LinkedList
+| Struct | Desc |
+| :--- | :--- |
+| Node | Blok fundamental (satu gerbong) yang terdiri dari 2 hal: Data dan Pointer.|
+| Data | Nilai yang disimpan dalam node, bisa berupa tipe data apapun.|
+| Next | Pointer yang mengarah ke node berikutnya dalam linkedlist.|
+|Previous | Pointer yang mengarah ke node sebelumnya dalam linkedlist (hanya ada di doubly linkedlist).|
+| Pointer | Alamat referensi yang bertugas merantai satu node ke node lainnya agar tetap terhubung meski memori fisiknya terpencar.|
+| Head | Node pertama dalam linkedlist, menjadi titik awal untuk menelusuri seluruh node.|
+| Tail | Node terakhir dalam linkedlist, menjadi titik akhir dari linkedlist, biasanya menunjuk ke NULL.|
+### important linkedlist operations
+| method | Desc |
+| :--- | :--- |
+| Insertion | Proses menambahkan node baru (bisa di awal/Head, tengah, atau akhir/Tail).|
+| Deletion | Menghapus node dari linkedlist, bisa di awal, akhir, atau posisi tertentu.|
+| Traversal | Proses mengunjungi setiap node satu per satu, yang wajib dimulai dari Head berlanjut terus mengikuti pointer hingga node terakhir.|
+| Searching | Proses mencari data tertentu dengan melakukan traversal secara linier dari awal rantai sampai datanya ditemukan.|
+| Updating | Mengubah data di dalam sebuah node tanpa mengubah struktur rantainya. Proses ini mengharuskan kita melakukan traversal dahulu untuk menemukan target, baru nilainya diubah.|
+| Count Nodes | Menghitung jumlah node yang ada dalam linkedlist dengan melakukan traversal dari Head hingga Tail.|
