@@ -12,23 +12,12 @@ generics sebagai kotak dengan label kosong yang dapat diisi dengan semua jenis b
 ## 2. Wildcard <?>
  adalah simbol yang digunakan dalam generics untuk mewakili tipe data yang tidak diketahui. sifatnya read-only, artinya kita dapat membaca data dari struktur data tersebut, dilarangu untuk menambah data baru.
 
-> gambaran flow struktur data generics:
-
-[ Wadah: Box<String> ]
-       |
-       +--> Input : Masukkan "Buku" (String) -> Diterima.
-       |
-       +--> Input : Masukkan Angka 100 -> DITOLAK COMPILER (Red Squiggle). *ditolak karna label box string tidak bisa diisi angka
-       |
-       +--> Output: Langsung diambil sebagai String. Bebas Casting.
-       |
-       +--> HASIL : Aman, siap diproses.
 
 ## 3. Enumerated
   adalah tipe data khusus sekumpulan konstanta(tetap) untuk memastikan nilai var tidak melenceng dari pilihan yg ada.
   Enumerated sering digunakan untuk merepresentasikan status, kategori, atau pilihan terbatas dalam program.
-  Fungsi <T> (Generics): Membangun struktur data yang fleksibel saat diciptakan, tapi ketat saat digunakan (misal: mendesain lemari khusus baju).
-  Fungsi <?> (Wildcard): Membuat method baca yang sangat luas cakupannya (misal: menugaskan inspektur yang bebas mengecek semua lemari di gudang, entah itu lemari baju atau lemari sepatu).
+  > Fungsi <T> (Generics): Membangun struktur data yang fleksibel saat diciptakan, tapi ketat saat digunakan (misal: mendesain lemari khusus baju).
+  > Fungsi <?> (Wildcard): Membuat method baca yang sangat luas cakupannya (misal: menugaskan inspektur yang bebas mengecek semua lemari di gudang, entah itu lemari baju atau lemari sepatu).
 
 
 ## 4. Arraylist
