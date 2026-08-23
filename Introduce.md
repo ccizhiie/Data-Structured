@@ -36,15 +36,11 @@ generics sebagai kotak dengan label kosong yang dapat diisi dengan semua jenis b
   arraylist memiliki kelebihan dalam hal akses data yang cepat, namun memiliki kelemahan dalam hal penambahan dan penghapusan data di tengah-tengah arraylist karena memerlukan shifting atau penggeseran elemen setelahnya.
 
 | method | Desc |
------------------
+| :--- | :--- |
 | add() | menambahkan data ke akhir arraylist |
------------------------------------------------
 | add(index, data) | Menyelipkan data di posisi tengah, yang memaksa data di sebelah kanannya bergeser |
----------------------------------------------------------------------------------------------------------
 | get(index) | Mengambil data dari posisi tertentu |
-----------------------------------------------------
 | set(index, data) | Mengubah data lama dengan data baru di posisi yang sama persis tanpa menggeser posisi lainnya |
---------------------------------------------------------------------------------------------------------------------
 | remove(index) | Menghapus data di posisi tertentu, yang memaksa data di sebelah kanannya bergeser ke kiri |
 | size() | Menghitung jumlah data yang tersimpan di arraylist |
 | isEmpty() | Mengecek apakah arraylist kosong atau tidak |
