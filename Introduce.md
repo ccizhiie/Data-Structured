@@ -6,11 +6,19 @@ generics sebagai kotak dengan label kosong yang dapat diisi dengan semua jenis b
 
 ## 1. Generics </T>
  adalah parameter tipedata umum yang digunakan untuk membuat class, method, dan struktur data yang dapat bekerja dengan berbagai tipe data tanpa harus menulis kode yang berbeda untuk setiap tipe data.
+ ## Parameter Generics
+ - E: Element, digunakan untuk koleksi elemen (misal: ArrayList, LinkedList)
+ - K: Key, digunakan untuk pasangan key-value (misal: Map)
+ - V: Value, digunakan untuk pasangan key-value (misal: Map)
+  - N: Number, digunakan untuk tipe data numerik (misal: Integer, Double)
+- T: Type, digunakan untuk tipe data umum (misal: Tipe data apa saja)
 
  dengan Generics, satu class dapat digunakan ulang untuk menyimpan berbagai macam tipe data tanpa perlu menulis kode duplikat atau memaksa penggunaan tipe data Object secara primitif
 
 ## 2. Wildcard <?>
  adalah simbol yang digunakan dalam generics untuk mewakili tipe data yang tidak diketahui. sifatnya read-only, artinya kita dapat membaca data dari struktur data tersebut, dilarangu untuk menambah data baru.
+
+
 
 
 ## 3. Enumerated
@@ -61,3 +69,6 @@ generics sebagai kotak dengan label kosong yang dapat diisi dengan semua jenis b
 | Searching | Proses mencari data tertentu dengan melakukan traversal secara linier dari awal rantai sampai datanya ditemukan.|
 | Updating | Mengubah data di dalam sebuah node tanpa mengubah struktur rantainya. Proses ini mengharuskan kita melakukan traversal dahulu untuk menemukan target, baru nilainya diubah.|
 | Count Nodes | Menghitung jumlah node yang ada dalam linkedlist dengan melakukan traversal dari Head hingga Tail.|
+## 6. Stack
+  stack adalah struktur data yang mengikuti prinsip LIFO (Last In First Out), artinya elemen terakhir yang ditambahkan akan menjadi elemen pertama yang dihapus. stack dapat diimplementasikan menggunakan array atau linkedlist.=
+  > contoh penggunaan adalah fitur undo pada aplikasi, dimana aksi terakhir yang dilakukan akan dibatalkan terlebih dahulu.
